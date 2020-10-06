@@ -7,7 +7,7 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
 var x = "abcd <Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>"
 f(x)
-
+var i = 0;
 function f(x){
  // console.log(x)
   let start = x.indexOf("<Tooltip")
@@ -31,6 +31,10 @@ let start = resp.indexOf(">")
  let d2 = resp.substring(start+1, end);
  //console.log(d2)
  return d2;
+}
+
+function extractRemainingText(text){
+
 }
 
 function prepareContent(resp){
