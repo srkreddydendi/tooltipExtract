@@ -5,7 +5,7 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
-var x = "<Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>"
+var x = "abcd <Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>"
 f(x)
 
 function f(x){
