@@ -29,7 +29,7 @@ let start = resp.indexOf(">")
  //console.log(start +" "+end)
  //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
  let d2 = resp.substring(start+1, end);
- console.log(d2)
+ //console.log(d2)
  return d2;
 }
 
@@ -42,6 +42,6 @@ function prepareContent(resp){
  //console.log(end)
  //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
  let d2 = d1.substring(start+9, end);
- console.log(d2)
+// console.log(d2)
 return d2;
 }
