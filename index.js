@@ -5,14 +5,14 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
-var x = "<Tooltip placement='top' content='hello world'>abcd</Tooltip> xyz <Tooltip placement='top' content='xus'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx</Tooltip>"
+var x = "<Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>"
 f(x)
 
 function f(x){
  // console.log(x)
   let start = x.indexOf("<Tooltip")
   let end = x.indexOf("</Tooltip>")
-  let resp = x.substr(start, end+10);
+  let resp = x.substring(start, end+10);
   //console.log(resp) 
   let content = prepareContent(resp)
   let text = prepateText(resp)
