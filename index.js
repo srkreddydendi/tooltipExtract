@@ -18,7 +18,7 @@ function f(x) {
   //console.log("aaa "+i)
   if (i === 0) {
     //console.log("aaa "+i)
-    extractRemainingText(i, start);
+    extractRemainingText(i, start, x);
   }
   //console.log(resp)
   let content = prepareContent(resp);
@@ -26,8 +26,9 @@ function f(x) {
   arr.push({ content: content, text: text });
   let nextText = x.substr(end + 10, x.length);
   if (nextText.includes("<Tooltip")) {
-    f(nextText);
     i++;
+    f(nextText);
+    
   }
 }
 console.log(JSON.stringify(arr));
@@ -42,8 +43,10 @@ function prepateText(resp) {
   return d2;
 }
 
-function extractRemainingText(i, j) {
+function extractRemainingText(i, j, t) {
   console.log(i + " XXXX " + j);
+  let r = t.substring(i , j);
+  console.log(r);
 }
 
 function prepareContent(resp) {
