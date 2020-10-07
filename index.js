@@ -6,7 +6,7 @@ const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
 var x =
-  "<p> abcd <Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip></p>";
+  "<p> abcd <Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>jjjj</p>";
   var i = 0;
 f(x);
 
