@@ -33,7 +33,7 @@ function f(x) {
     
   }
 }
-//console.log(JSON.stringify(arr));
+console.log(JSON.stringify(arr));
 function prepateText(resp) {
   // console.log(resp)
   let start = resp.indexOf(">");
