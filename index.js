@@ -19,6 +19,8 @@ function f(x) {
   if (i === 0) {
     //console.log("aaa "+i)
     extractRemainingText(i, start, x);
+  }else{
+    extractRemainingText(i, start, x);
   }
   //console.log(resp)
   let content = prepareContent(resp);
@@ -31,7 +33,7 @@ function f(x) {
     
   }
 }
-console.log(JSON.stringify(arr));
+//console.log(JSON.stringify(arr));
 function prepateText(resp) {
   // console.log(resp)
   let start = resp.indexOf(">");
@@ -44,7 +46,7 @@ function prepateText(resp) {
 }
 
 function extractRemainingText(i, j, t) {
-  console.log(i + " XXXX " + j);
+  //console.log(i + " XXXX " + j);
   let r = t.substring(i , j);
   console.log(r);
 }
