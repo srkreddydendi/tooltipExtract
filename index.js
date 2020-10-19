@@ -6,7 +6,7 @@ const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
 var x =
-  "<p> abcd <Tooltip placement='top' content='hello world aurn welcome'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='hello1 world1'>xyx sdfsdfsdfdsf sss</Tooltip>jjjj</p>";
+  "<p> abcd <Tooltip placement='top' content='<p>hello world aurn welcome</p>'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='<p>hello1 world1</p>'>xyx sdfsdfsdfdsf sss</Tooltip>jjjj</p>";
 var i = 0;
 f(x);
 
@@ -35,7 +35,7 @@ function f(x) {
     extractRemainingText(end + 10, x.length, x);
   }
 }
-//console.log(JSON.stringify(arr));
+console.log(JSON.stringify(arr));
 function prepateText(resp) {
   // console.log(resp)
   let start = resp.indexOf(">");
