@@ -22,7 +22,7 @@ function f(x) {
   textdata.push(extractRemainingText(i, start, x));
   let content = prepareContent(resp);
   let text = prepateText(resp);
-  console.log("text === ", text);
+  //console.log("text === ", text);
   arr.push({ content: content, text: text });
   let nextText = x.substr(end + 10, x.length);
   if (nextText.includes("<Tooltip")) {
@@ -32,7 +32,7 @@ function f(x) {
     extractRemainingText(end + 10, x.length, x);
   }
 }
-console.log(JSON.stringify(arr));
+//console.log(JSON.stringify(arr));
 function prepateText(resp) {
   // console.log(resp)
   let start;
