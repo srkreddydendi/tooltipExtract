@@ -20,11 +20,6 @@ function f(x) {
   //if (i === 0) {
   //console.log("aaa "+i)
   textdata.push(extractRemainingText(i, start, x));
-  //}
-  /*else {
-    extractRemainingText(i, start, x);
-  }*/
-  //console.log(resp)
   let content = prepareContent(resp);
   let text = prepateText(resp);
   console.log("text === ", text);
@@ -65,13 +60,14 @@ function prepateText(resp) {
 function extractRemainingText(i, j, t) {
   //console.log(i + " XXXX " + j);
   let r = t.substring(i, j);
-  console.log(r);
+  // console.log(r);
 }
 
 function prepareContent(resp) {
-  let d = resp.split("Tooltip");
+  console.log(resp);
+  if (resp.includes("<p")) {
+    let d = resp.split("Tooltip");
   let d1 = d[1];
-  //console.log(d1)
   let start = d1.indexOf("content=");
   let end = d1.indexOf("'>");
   //console.log(end)
@@ -79,4 +75,17 @@ function prepareContent(resp) {
   let d2 = d1.substring(start + 9, end);
   // console.log(d2)
   return d2;
+  }else{
+    let d = resp.split("Tooltip");
+  let d1 = d[1];
+
+  let start = d1.indexOf("content=");
+  let end = d1.indexOf("'>");
+  //console.log(end)
+  //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
+  let d2 = d1.substring(start + 9, end);
+  // console.log(d2)
+  return d2;
+  }
+  
 }
