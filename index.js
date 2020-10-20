@@ -53,7 +53,7 @@ function prepateText(resp) {
    // d2 = resp.substring(start + 2, end);
   //}
   //let d2 = resp.substring(start + 3, end);
-  console.log("out put  ::", d2);
+  //console.log("out put  ::", d2);
   return d2;
 }
 
