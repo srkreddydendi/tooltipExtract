@@ -34,10 +34,10 @@ function f(x) {
 }
 //console.log(JSON.stringify(arr));
 function prepateText(resp) {
-  // console.log(resp)
+  console.log("prepateText ... " + resp);
   let start;
-  if (arr.includes(">'>")) {
-    start = resp.indexOf(">'>");
+  if (resp.includes("'>")) {
+    start = resp.indexOf("'>");
   } else {
     start = resp.indexOf(">");
   }
@@ -47,13 +47,13 @@ function prepateText(resp) {
   //console.log(start +" "+end)
   //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
   let d2;
-  if (arr.includes(">'>")) {
-    d2 = resp.substring(start + 3, end);
-  } else {
-    d2 = resp.substring(start + 1, end);
-  }
+  //if (resp.includes(">'>")) {
+    d2 = resp.substring(start + 2, end);
+  //} else {
+   // d2 = resp.substring(start + 2, end);
+  //}
   //let d2 = resp.substring(start + 3, end);
-  //console.log(d2)
+  console.log("out put  ::", d2);
   return d2;
 }
 
@@ -64,7 +64,7 @@ function extractRemainingText(i, j, t) {
 }
 
 function prepareContent(resp) {
- // console.log(resp);
+  // console.log(resp);
   if (resp.includes("<p")) {
     let d = resp.split("Tooltip");
     let d1 = d[1];
@@ -72,8 +72,8 @@ function prepareContent(resp) {
     let end = d1.indexOf(">'>");
     //console.log(end)
     //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
-    let d2 = d1.substring(start + 9, end+1);
-     console.log(d2)
+    let d2 = d1.substring(start + 9, end + 1);
+    // console.log(d2)
     return d2;
   } else {
     let d = resp.split("Tooltip");
@@ -84,7 +84,7 @@ function prepareContent(resp) {
     //console.log(end)
     //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
     let d2 = d1.substring(start + 9, end);
-     console.log(d2)
+    // console.log(d2)
     return d2;
   }
 }
