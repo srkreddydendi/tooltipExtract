@@ -32,9 +32,9 @@ function f(x) {
     extractRemainingText(end + 10, x.length, x);
   }
 }
-//console.log(JSON.stringify(arr));
+console.log(JSON.stringify(arr));
 function prepateText(resp) {
-  console.log("prepateText ... " + resp);
+  //console.log("prepateText ... " + resp);
   let start;
   if (resp.includes("'>")) {
     start = resp.indexOf("'>");
