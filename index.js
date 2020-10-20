@@ -64,7 +64,7 @@ function extractRemainingText(i, j, t) {
 }
 
 function prepareContent(resp) {
-  console.log(resp);
+ // console.log(resp);
   if (resp.includes("<p")) {
     let d = resp.split("Tooltip");
     let d1 = d[1];
@@ -84,7 +84,7 @@ function prepareContent(resp) {
     //console.log(end)
     //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
     let d2 = d1.substring(start + 9, end);
-    // console.log(d2)
+     console.log(d2)
     return d2;
   }
 }
