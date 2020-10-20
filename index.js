@@ -67,25 +67,24 @@ function prepareContent(resp) {
   console.log(resp);
   if (resp.includes("<p")) {
     let d = resp.split("Tooltip");
-  let d1 = d[1];
-  let start = d1.indexOf("content=");
-  let end = d1.indexOf("'>");
-  //console.log(end)
-  //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
-  let d2 = d1.substring(start + 9, end);
-  // console.log(d2)
-  return d2;
-  }else{
+    let d1 = d[1];
+    let start = d1.indexOf("content=");
+    let end = d1.indexOf(">'>");
+    //console.log(end)
+    //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
+    let d2 = d1.substring(start + 9, end+1);
+     console.log(d2)
+    return d2;
+  } else {
     let d = resp.split("Tooltip");
-  let d1 = d[1];
+    let d1 = d[1];
 
-  let start = d1.indexOf("content=");
-  let end = d1.indexOf("'>");
-  //console.log(end)
-  //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
-  let d2 = d1.substring(start + 9, end);
-  // console.log(d2)
-  return d2;
+    let start = d1.indexOf("content=");
+    let end = d1.indexOf("'>");
+    //console.log(end)
+    //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
+    let d2 = d1.substring(start + 9, end);
+    // console.log(d2)
+    return d2;
   }
-  
 }
