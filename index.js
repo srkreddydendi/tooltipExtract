@@ -5,6 +5,7 @@ import "./style.css";
 const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 var arr = [];
+var textdata = [];
 var x =
   "<p> abcd <Tooltip placement='top' content='<p>hello world aurn welcome</p>'>abcd hello worlds ared </Tooltip> xyz asdfsadfsdfsdfsdfdsf <Tooltip placement='top' content='xus asdfsadfdfa'>hello world </Tooltip> asdasd <Tooltip placement='top' content='<p>hello1 world1</p>'>xyx sdfsdfsdfdsf sss</Tooltip>jjjj</p>";
 var i = 0;
@@ -18,7 +19,7 @@ function f(x) {
   //console.log("start " + start + " end " + end);
   //if (i === 0) {
   //console.log("aaa "+i)
-  extractRemainingText(i, start, x);
+  textdata.push(extractRemainingText(i, start, x));
   //}
   /*else {
     extractRemainingText(i, start, x);
@@ -26,6 +27,7 @@ function f(x) {
   //console.log(resp)
   let content = prepareContent(resp);
   let text = prepateText(resp);
+  console.log("text === ", text);
   arr.push({ content: content, text: text });
   let nextText = x.substr(end + 10, x.length);
   if (nextText.includes("<Tooltip")) {
@@ -38,11 +40,24 @@ function f(x) {
 console.log(JSON.stringify(arr));
 function prepateText(resp) {
   // console.log(resp)
-  let start = resp.indexOf(">");
+  let start;
+  if (arr.includes(">'>")) {
+    start = resp.indexOf(">'>");
+  } else {
+    start = resp.indexOf(">");
+  }
+
+  //start = resp.substring(2, start.length);
   let end = resp.lastIndexOf("<");
   //console.log(start +" "+end)
   //d =d[1].match(new RegExp("content" + "(.*)" + "</"));
-  let d2 = resp.substring(start + 1, end);
+  let d2;
+  if (arr.includes(">'>")) {
+    d2 = resp.substring(start + 3, end);
+  } else {
+    d2 = resp.substring(start + 1, end);
+  }
+  //let d2 = resp.substring(start + 3, end);
   //console.log(d2)
   return d2;
 }
